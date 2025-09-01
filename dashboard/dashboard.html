@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Dark Mode</title>
+
+    <link rel="stylesheet" href="style.css">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="dashboard">
+        <nav class="sidebar">
+            <ul class="nav-icons">
+                <li>
+                    <a href="#" title="Perfil">
+                        <i class="fas fa-user"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="active" title="Mensagens">
+                        <i class="fas fa-comment-alt"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" title="Projetos">
+                        <i class="fas fa-folder"></i>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <main class="main-content">
+            
+            <div class="table-container">
+                <h2>Projetos</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Nome do Projeto</th>
+                            <th>Status</th>
+                            <th>Prazo Final</th>
+                            <th>Progresso</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Desenvolvimento do App Mobile</td>
+                            <td>Em Andamento</td>
+                            <td>30/09/2025</td>
+                            <td>
+                                <div class="progress-container">
+                                    <div class="progress-bar" style="width: 75%;"></div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Redesign do Website</td>
+                            <td>Concluído</td>
+                            <td>01/08/2025</td>
+                            <td>
+                                <div class="progress-container">
+                                    <div class="progress-bar" style="width: 100%;"></div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Campanha de Marketing</td>
+                            <td>A Iniciar</td>
+                            <td>15/10/2025</td>
+                            <td>
+                                <div class="progress-container">
+                                    <div class="progress-bar" style="width: 10%;"></div>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="table-container">
+                <h2>Mensagens</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Remetente</th>
+                            <th>Assunto</th>
+                            <th>Horário</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Ana Silva</td>
+                            <td>Relatório Semanal</td>
+                            <td>10:45 AM</td>
+                            <td><span class="status-indicator status-online"></span></td>
+                        </tr>
+                        <tr>
+                            <td>Carlos Souza</td>
+                            <td>Re: Reunião de alinhamento</td>
+                            <td>Ontem</td>
+                            <td><span class="status-indicator status-offline"></span></td>
+                        </tr>
+                        <tr>
+                            <td>Equipe de Suporte</td>
+                            <td>Atualização do sistema</td>
+                            <td>25/08/2025</td>
+                            <td><span class="status-indicator status-offline"></span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </main>
+    </div>
+
+</body>
+</html>

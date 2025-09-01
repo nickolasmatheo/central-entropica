@@ -1,0 +1,143 @@
+/* CSS - Estilização da Página */
+
+/* Reset e Configurações Globais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #121212; /* Cor de fundo principal (bem escura) */
+    color: #e0e0e0; /* Cor do texto principal (cinza claro) */
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Container Principal do Dashboard */
+.dashboard {
+    display: flex;
+    width: 100%;
+    padding: 20px;
+}
+
+/* Barra Lateral (Sidebar) */
+.sidebar {
+    width: 80px;
+    background-color: #1f1f1f; /* Cor de fundo da barra lateral */
+    padding: 20px 0;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 30px;
+    transition: width 0.3s; /* Efeito de transição suave */
+}
+
+.nav-icons {
+    list-style: none;
+    width: 100%;
+}
+
+.nav-icons li {
+    margin-bottom: 20px;
+}
+
+.nav-icons a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    width: 50px;
+    margin: 0 auto;
+    border-radius: 12px;
+    color: #a0a0a0; /* Cor dos ícones */
+    text-decoration: none;
+    font-size: 1.4rem;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.nav-icons a:hover {
+    background-color: #333; /* Fundo do ícone ao passar o mouse */
+    color: #ffffff; /* Cor do ícone ao passar o mouse */
+}
+
+.nav-icons a.active {
+    background-color: #2a2a2a;
+    color: #ffffff;
+}
+
+/* Conteúdo Principal */
+.main-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 30px; /* Espaço entre os containers de tabela */
+}
+
+/* Container das Tabelas */
+.table-container {
+    background-color: #1f1f1f; /* Cor de fundo das tabelas */
+    border-radius: 15px;
+    padding: 25px;
+}
+
+.table-container h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse; /* Remove espaço entre bordas das células */
+}
+
+th, td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #333; /* Linha separadora entre as linhas */
+}
+
+thead th {
+    color: #a0a0a0; /* Cor do texto do cabeçalho */
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+}
+
+tbody tr:last-child td {
+    border-bottom: none; /* Remove a borda da última linha */
+}
+
+/* Barra de Progresso */
+.progress-container {
+    width: 100%;
+    background-color: #333;
+    height: 8px;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.progress-bar {
+    height: 100%;
+    background-color: #4caf50; /* Cor da barra de progresso */
+    border-radius: 4px;
+}
+
+/* Indicador de Status das Mensagens */
+.status-indicator {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+
+.status-online {
+    background-color: #4caf50; /* Verde para 'online' ou 'ativo' */
+}
+
+.status-offline {
+    background-color: #555; /* Cinza para 'offline' ou 'inativo' */
+}
