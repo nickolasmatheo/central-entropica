@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciador de Projetos</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        <aside class="sidebar">
+            <div class="sidebar__top">
+                <div class="sidebar__header">
+                    <h3>Workspaces</h3>
+                </div>
+                <nav class="sidebar__nav">
+                    <ul>
+                        <li class="sidebar__nav-item"><a href="#"><span>🏠</span> Main</a></li>
+                        <li class="sidebar__nav-item active"><a href="#"><span>📋</span> Night Eye</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="sidebar__bottom">
+                <a href="#" class="upgrade-button">Upgrade</a>
+                <div class="user-profile">
+                    <span>S</span>
+                </div>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <header class="board-header">
+                <div class="board-header__title">
+                    <h1>Night Eye ★</h1>
+                </div>
+                <div class="board-header__actions">
+                    <div class="team-avatars">
+                        <span class="avatar">S</span>
+                    </div>
+                    <button class="btn btn--secondary">Start Zoom call</button>
+                    <button class="btn btn--secondary">Activities / 0</button>
+                </div>
+            </header>
+
+            <div class="board-toolbar">
+                <button class="btn btn--primary">New Item</button>
+                <input type="text" class="search-bar" placeholder="Search / Filter Board">
+            </div>
+
+            <section class="task-group">
+                <h2 class="task-group__title">Things to do</h2>
+                <div class="task-group__progress-bar">
+                    <div class="progress" style="width: 25%;"></div>
+                </div>
+                <table class="task-table">
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th>Owner</th>
+                            <th>Status</th>
+                            <th>Due date</th>
+                            <th>Priority</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="task-name">Create Monday.com screenshots</td>
+                            <td><span class="avatar">S</span></td>
+                            <td><span class="status status--working">Working on it</span></td>
+                            <td>Apr 22</td>
+                            <td><div class="priority-cell"></div></td>
+                        </tr>
+                        <tr>
+                            <td class="task-name">Edit the final version</td>
+                            <td><span class="avatar">S</span></td>
+                            <td><div class="status-cell"></div></td>
+                            <td>Apr 22</td>
+                            <td><div class="priority-cell"></div></td>
+                        </tr>
+                         <tr>
+                            <td class="task-name">Resize the images</td>
+                            <td><span class="avatar">S</span></td>
+                            <td><div class="status-cell"></div></td>
+                            <td>Apr 22</td>
+                            <td><div class="priority-cell"></div></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <button class="add-item-btn">+ Add</button>
+            </section>
+
+            <section class="task-group">
+                <h2 class="task-group__title">Done</h2>
+                 <div class="task-group__progress-bar">
+                    <div class="progress" style="width: 100%;"></div>
+                </div>
+                <table class="task-table">
+                     <thead>
+                        <tr>
+                            <th></th>
+                            <th>Owner</th>
+                            <th>Status</th>
+                            <th>Due date</th>
+                            <th>Priority</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="task-name">Finish the first draft</td>
+                            <td><span class="avatar">S</span></td>
+                            <td><span class="status status--done">Done</span></td>
+                            <td>Apr 21</td>
+                            <td><div class="priority-cell"></div></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <button class="add-item-btn">+ Add</button>
+            </section>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,266 @@
+/* Definição de variáveis de estilo (Cores, Fontes, etc.) */
+:root {
+    --bg-primary: #1c1f26;
+    --bg-secondary: #282b34;
+    --bg-tertiary: #333742;
+    --text-primary: #e0e0e0;
+    --text-secondary: #a0a0a0;
+    --color-accent: #0073ea;
+    --status-working: #fdab3d;
+    --status-done: #00c875;
+    --border-color: #404450;
+    --font-family: 'Inter', sans-serif;
+}
+
+/* Reset básico e estilos globais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-family);
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    font-size: 14px;
+}
+
+/* Layout Principal */
+.app-container {
+    display: flex;
+    height: 100vh;
+}
+
+/* Estilos da Barra Lateral */
+.sidebar {
+    width: 250px;
+    background-color: var(--bg-secondary);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-right: 1px solid var(--border-color);
+}
+
+.sidebar__header h3 {
+    font-weight: 500;
+}
+
+.sidebar__nav ul {
+    list-style: none;
+    margin-top: 20px;
+}
+
+.sidebar__nav-item a {
+    display: block;
+    color: var(--text-primary);
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+.sidebar__nav-item a span {
+    margin-right: 10px;
+}
+
+.sidebar__nav-item.active a,
+.sidebar__nav-item a:hover {
+    background-color: var(--bg-tertiary);
+}
+
+.upgrade-button {
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 12px;
+    background-color: #00c875;
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.user-profile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background-color: #d63a55;
+    color: white;
+    border-radius: 50%;
+    font-weight: 700;
+}
+
+/* Estilos do Conteúdo Principal */
+.main-content {
+    flex-grow: 1;
+    padding: 20px 40px;
+    overflow-y: auto;
+}
+
+.board-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.board-header__title h1 {
+    font-size: 24px;
+}
+
+.board-header__actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.team-avatars {
+    display: flex;
+}
+
+.avatar {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: #d63a55;
+    color: white;
+    font-weight: 500;
+    border: 2px solid var(--bg-primary);
+    margin-left: -8px;
+}
+
+.avatar:first-child {
+    margin-left: 0;
+}
+
+.btn {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 5px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.btn--primary {
+    background-color: var(--color-accent);
+    color: white;
+}
+
+.btn--secondary {
+    background-color: var(--bg-tertiary);
+    color: var(--text-primary);
+}
+
+.board-toolbar {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.search-bar {
+    background-color: var(--bg-tertiary);
+    border: 1px solid var(--border-color);
+    padding: 8px 12px;
+    border-radius: 5px;
+    color: var(--text-primary);
+    width: 250px;
+}
+
+/* Estilos dos Grupos e Tabelas de Tarefas */
+.task-group {
+    margin-bottom: 40px;
+}
+
+.task-group__title {
+    color: var(--text-primary);
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.task-group__progress-bar {
+    height: 8px;
+    background-color: var(--bg-tertiary);
+    border-radius: 4px;
+    overflow: hidden;
+    margin-bottom: 1px;
+}
+
+.progress {
+    height: 100%;
+    background-color: var(--status-done);
+}
+.task-group:first-of-type .progress {
+    background-color: var(--status-working);
+}
+
+
+.task-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: var(--bg-secondary);
+}
+
+.task-table th, .task-table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.task-table th {
+    color: var(--text-secondary);
+    font-weight: 500;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+.task-table th:first-child, .task-table td:first-child {
+    width: 50%;
+}
+
+
+.task-table .task-name {
+    color: var(--text-primary);
+}
+
+.status {
+    padding: 4px 12px;
+    border-radius: 15px;
+    font-weight: 500;
+    text-align: center;
+    color: white;
+}
+
+.status--working {
+    background-color: var(--status-working);
+}
+
+.status--done {
+    background-color: var(--status-done);
+}
+
+.status-cell, .priority-cell {
+    height: 28px;
+    background-color: var(--bg-tertiary);
+    border-radius: 5px;
+}
+
+.add-item-btn {
+    background: none;
+    border: 1px solid var(--border-color);
+    color: var(--text-secondary);
+    padding: 8px;
+    width: 100%;
+    cursor: pointer;
+    text-align: left;
+}
+
+.add-item-btn:hover {
+    background-color: var(--bg-tertiary);
+}
