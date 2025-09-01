@@ -1,0 +1,140 @@
+/* Importa uma fonte moderna do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+/* Reset básico e configurações globais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #000000;
+    /* Efeito de gradiente radial para simular um "buraco negro" */
+    background-image: radial-gradient(circle, #1a0c2e 0%, #000000 60%);
+    color: #e0e0e0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-size: 16px;
+}
+
+.container {
+    width: 100%;
+    max-width: 400px;
+    padding: 40px;
+    background-color: rgba(10, 5, 20, 0.6); /* Fundo semi-transparente */
+    border-radius: 15px;
+    border: 1px solid rgba(138, 43, 226, 0.3); /* Borda roxa sutil */
+    box-shadow: 0 0 25px rgba(138, 43, 226, 0.2); /* Sombra neon */
+    backdrop-filter: blur(5px); /* Efeito de vidro fosco */
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-weight: 600;
+    color: #fff;
+    letter-spacing: 1px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 300;
+    color: #a0a0a0;
+}
+
+.form-control {
+    width: 100%;
+    padding: 12px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 1px solid #4a148c; /* Roxo escuro */
+    border-radius: 8px;
+    color: #e0e0e0;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.form-control:focus {
+    outline: none;
+    border-color: #9c27b0; /* Roxo mais claro no foco */
+    box-shadow: 0 0 10px rgba(156, 39, 176, 0.5);
+}
+
+.btn {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    /* Gradiente cósmico */
+    background-image: linear-gradient(45deg, #4a148c, #9c27b0);
+    color: #fff;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(138, 43, 226, 0.4);
+}
+
+.link-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.link-container a {
+    color: #c18eff;
+    text-decoration: none;
+    font-weight: 400;
+    transition: color 0.3s ease;
+}
+
+.link-container a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+/* Mensagens de erro/sucesso */
+.alert {
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    text-align: center;
+}
+
+.alert-danger {
+    color: #f8d7da;
+    background-color: #721c24;
+    border-color: #f5c6cb;
+}
+
+.alert-success {
+    color: #d4edda;
+    background-color: #155724;
+    border-color: #c3e6cb;
+}
+
+/* Página Home */
+.home-content {
+    text-align: center;
+}
+.home-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+.home-content p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}

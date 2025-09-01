@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+{% block content %}
+    <h2>Cadastro</h2>
+    <p>Crie sua conta para acessar a central.</p>
+    <form method="POST" action="{{ url_for('cadastro') }}">
+        <div class="form-group">
+            <label>Nome de Usuário</label>
+            <input type="text" name="username" class="form-control" required>
+        </div>    
+        <div class="form-group">
+            <label>Senha</label>
+            <input type="password" name="password" class="form-control" required>
+        </div>
+        <div class="form-group">
+            <button type="submit" class="btn">Criar Conta</button>
+        </div>
+        <div class="link-container">
+            <p>Já tem uma conta? <a href="{{ url_for('login') }}">Faça o login</a>.</p>
+        </div>
+    </form>
+{% endblock %}

@@ -1,0 +1,10 @@
+{% extends "layout.html" %}
+{% block content %}
+    <div class="home-content">
+        <h1>Olá, <b>{{ session.username }}</b>!</h1>
+        <p>Bem-vindo à sua central de projetos, construída com Flask e PostgreSQL.</p>
+        <p>
+            <a href="{{ url_for('logout') }}" class="btn">Sair da Conta</a>
+        </p>
+    </div>
+{% endblock %}
